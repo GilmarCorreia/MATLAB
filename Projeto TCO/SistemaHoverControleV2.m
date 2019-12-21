@@ -2,7 +2,7 @@
 clear all; close all; clc;
 
 h = 0.01;
-max = 20;
+max = 30;
 t = 0:h:max;
 
 %% Setando aceleração frontal e angular inicial
@@ -15,13 +15,13 @@ beta = 1.2;
 %% Setando as posições iniciais e de referência
 
 %ponto inicial = [x, y,psi,u,v,r]
-       %p       = [1;-1; 1 ;0;0;0];
-       p       = [-1.5;1; 1 ;0;0;0];
+       p       = [1;-1; 1 ;0;0;0];
+       %p       = [-1.5;1; 1 ;0;0;0];
     p_initial  = p;
 
 %trajetória de referência = [x_r,y_r,psi_r,u_r,v_r,r_r]
-         %traj_ref         = [ 0 ; 0 ; 0.78;0.5; 0 ; 0 ];
-        traj_ref         = [ 0 ; 0 ; 2.09;0.5; 0 ; 0 ];
+         traj_ref         = [ 0 ; 0 ; 0.78;0.5; 0 ; 0 ];
+        %traj_ref         = [ 0 ; 0 ; 2.09;0.5; 0 ; 0 ];
 [x_ref,y_ref,psi_ref,u_ref,v_ref,r_ref] = DinamicaHoverEDOsWT(t,tau_u_r,tau_r_r,beta, traj_ref);
 
 %variável para guardar os erros ao longo do tempo

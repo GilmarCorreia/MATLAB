@@ -5,15 +5,15 @@ t = 0:0.25:20;
 tempo = t;
 
 %Setando aceleração frontal e angular
-tau_u = 0.1*(heaviside(tempo));
-tau_r = 0*heaviside(tempo);
+tau_u = 1*(heaviside(tempo));
+tau_r = 1*heaviside(tempo);
 beta = 1.2;
 
 %% Colocando o valores iniciais de posição
 x0 = 0;
 y0 = 0;
-psi0 = 45;
-u0 = 0.5;
+psi0 = 0;
+u0 = 0;
 v0 = 0;
 r0 = 0;
 
